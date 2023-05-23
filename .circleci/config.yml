@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:13.8.0 # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
+      - run: npm i
       - run: npm run lint
 
   test:
